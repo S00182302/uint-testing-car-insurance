@@ -4599,11 +4599,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\brett\\Documents\\_itsligo\\Year 3.2\\QualityAndTesting\\CA\\testing app\\NUnitTestProject1\\NUnitTestProject1.csproj",
+      "projectUniqueName": "C:\\Users\\brett\\Documents\\_itsligo\\Year 3.2\\QualityAndTesting\\apps\\testingapp2\\NUnitTestProject1\\NUnitTestProject1.csproj",
       "projectName": "NUnitTestProject1",
-      "projectPath": "C:\\Users\\brett\\Documents\\_itsligo\\Year 3.2\\QualityAndTesting\\CA\\testing app\\NUnitTestProject1\\NUnitTestProject1.csproj",
+      "projectPath": "C:\\Users\\brett\\Documents\\_itsligo\\Year 3.2\\QualityAndTesting\\apps\\testingapp2\\NUnitTestProject1\\NUnitTestProject1.csproj",
       "packagesPath": "C:\\Users\\brett\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\brett\\Documents\\_itsligo\\Year 3.2\\QualityAndTesting\\CA\\testing app\\NUnitTestProject1\\obj\\",
+      "outputPath": "C:\\Users\\brett\\Documents\\_itsligo\\Year 3.2\\QualityAndTesting\\apps\\testingapp2\\NUnitTestProject1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -4622,8 +4622,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\brett\\Documents\\_itsligo\\Year 3.2\\QualityAndTesting\\CA\\testing app\\testing app\\testing app.csproj": {
-              "projectPath": "C:\\Users\\brett\\Documents\\_itsligo\\Year 3.2\\QualityAndTesting\\CA\\testing app\\testing app\\testing app.csproj"
+            "C:\\Users\\brett\\Documents\\_itsligo\\Year 3.2\\QualityAndTesting\\apps\\testingapp2\\testing app\\testing app.csproj": {
+              "projectPath": "C:\\Users\\brett\\Documents\\_itsligo\\Year 3.2\\QualityAndTesting\\apps\\testingapp2\\testing app\\testing app.csproj"
             }
           }
         }
