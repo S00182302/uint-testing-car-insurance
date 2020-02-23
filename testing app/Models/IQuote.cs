@@ -12,8 +12,8 @@ namespace testing_app.Models
 
         decimal CalculatePenaltyFee();
 
-        decimal CalculatePremium();
+        decimal CalculatePremium(DateTime currentDate);
 
-        decimal CalculateQuote();
+        decimal CalculateQuote(DateTime currentDate);
     }
 }

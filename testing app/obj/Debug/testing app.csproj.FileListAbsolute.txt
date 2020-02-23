@@ -8,7 +8,6 @@ C:\Users\brett\Documents\_itsligo\Year 3.2\QualityAndTesting\apps\testing app\te
 C:\Users\brett\Documents\_itsligo\Year 3.2\QualityAndTesting\apps\testing app\testing app\bin\Debug\nunit.framework.pdb
 C:\Users\brett\Documents\_itsligo\Year 3.2\QualityAndTesting\apps\testing app\testing app\bin\Debug\nunit.framework.xml
 C:\Users\brett\Documents\_itsligo\Year 3.2\QualityAndTesting\apps\testing app\testing app\obj\Debug\testing app.csproj.CopyComplete
-C:\Users\brett\Documents\_itsligo\Year 3.2\QualityAndTesting\CA\testing app\testing app\obj\Debug\testing app.csprojAssemblyReference.cache
 C:\Users\brett\Documents\_itsligo\Year 3.2\QualityAndTesting\CA\testing app\testing app\obj\Debug\testing app.exe
 C:\Users\brett\Documents\_itsligo\Year 3.2\QualityAndTesting\CA\testing app\testing app\obj\Debug\testing app.pdb
 C:\Users\brett\Documents\_itsligo\Year 3.2\QualityAndTesting\CA\testing app\testing app\bin\Debug\testing app.exe.config
