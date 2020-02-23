@@ -12,11 +12,13 @@ namespace NUnitTestProject1
         {
         }
 
+        [TestCase(-1, -1)]
+        [TestCase(13, -1)]
         [TestCase(0, 0)]
         [TestCase(3, 100)]
         [TestCase(5, 200)]
         [TestCase(10, 300)]
-        public void Test_CalculatePenaltyFee(int point, int expected)
+        public void Test_CalculatePenaltyFee(int point, decimal expected)
         {
             // Arrange
             Driver driver = new Driver();
