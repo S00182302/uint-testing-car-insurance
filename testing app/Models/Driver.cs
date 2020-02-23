@@ -23,7 +23,7 @@ namespace testing_app.Models
             int points = PenaltyPoints;
             decimal charge = 0m;
 
-            if (points < 0 && points > 12)
+            if (points < 0 || points > 12)
             {
                 charge = -1;
             }
@@ -45,16 +45,16 @@ namespace testing_app.Models
             }
             else if (points <= 12)
             {
-                charge = 300;
+                charge = 400;
             }
 
             return charge;
         }
 
-        public decimal CalculatePremium()
+        public decimal CalculatePremium(DateTime currentDate)
         {
             decimal basicPremium;
-            int age = GetAge(DateTime.Now, DOB);
+            int age = GetAge(currentDate, DOB);
             if (InsuranceType == InsuranceType.Comprehensive) {
                 basicPremium = 0.04m;
             }
@@ -67,15 +67,15 @@ namespace testing_app.Models
             {
                 basicPremium += 0.1m;
             }
-            return VehicleValue * basicPremium;
+            return basicPremium;
         }
 
-        public decimal CalculateQuote()
+        public decimal CalculateQuote(DateTime currentDate)
         {
             decimal result;
-            if (GetAge(DateTime.Now, DOB) >= 18 && CalculatePenaltyFee() != -1)
+            if (GetAge(currentDate, DOB) >= 18 && CalculatePenaltyFee() != -1)
             {
-                result = CalculatePremium() + CalculatePenaltyFee();
+                result = (CalculatePremium(currentDate) * VehicleValue) + CalculatePenaltyFee();
             } 
             else
             {

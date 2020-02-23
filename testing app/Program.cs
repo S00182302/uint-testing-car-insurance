@@ -55,14 +55,15 @@ namespace testing_app
                 }
             }
 
-            while (response != 3);
+            while (response != 2);
         }
 
         public static void PrintQuote(Driver driver)
         {
-            if (driver.CalculateQuote() != -1)
+            decimal quote = driver.CalculateQuote(DateTime.Now);
+            if (quote != -1)
             {
-                Console.WriteLine(string.Format("Your insurance quote is: {0:0.00}", driver.CalculateQuote()));
+                Console.WriteLine(string.Format("Your insurance quote is: {0:0.00}", quote));
             }
             else
             {
