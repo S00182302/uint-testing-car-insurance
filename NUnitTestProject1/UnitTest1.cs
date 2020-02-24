@@ -29,6 +29,28 @@ namespace NUnitTestProject1
             Assert.AreEqual(expected, actual);
         }
 
+        [TestCase(-1, -1)]
+        [TestCase(0, 0)]
+        [TestCase(1, 100)]
+        [TestCase(4, 100)]
+        [TestCase(5, 200)]
+        [TestCase(7, 200)]
+        [TestCase(8, 300)]
+        [TestCase(10, 300)]
+        [TestCase(11, 400)]
+        [TestCase(12, 400)]
+        [TestCase(13, -1)]
+        public void Test_CalculatePenaltyFee_Boundries(int point, decimal expected)
+        {
+            // Arrange
+            Driver driver = new Driver();
+            driver.PenaltyPoints = point;
+            // Act
+            var actual = driver.CalculatePenaltyFee();
+            // Assess
+            Assert.AreEqual(expected, actual);
+        }
+
         [TestCase("01/01/2020", "01/01/2000", 20)]
         [TestCase("01/01/2020", "01/01/2020", 0)]
         [TestCase("01/01/2020", "01/01/2025", -5)]
@@ -62,7 +84,27 @@ namespace NUnitTestProject1
             Assert.AreEqual(expected, actual);
         }
 
-        
+        [TestCase(InsuranceType.Comprehensive, "2020-01-01", "2021-01-01", 0.04)]
+        [TestCase(InsuranceType.Comprehensive, "2020-01-01", "2002-01-01", 0.14)]
+        [TestCase(InsuranceType.Comprehensive, "2020-01-01", "1995-01-01", 0.14)]
+        [TestCase(InsuranceType.Comprehensive, "2020-01-01", "1994-01-01", 0.04)]
+        [TestCase(InsuranceType.ThirdParty, "2020-01-01", "2021-01-01", 0.025)]
+        [TestCase(InsuranceType.ThirdParty, "2020-01-01", "2002-01-01", 0.125)]
+        [TestCase(InsuranceType.ThirdParty, "2020-01-01", "1995-01-01", 0.125)]
+        [TestCase(InsuranceType.ThirdParty, "2020-01-01", "1994-01-01", 0.025)]
+        public void Test_CalculatePremium_Boundries(InsuranceType insuranceType, DateTime currentDate, DateTime dob, decimal expected)
+        {
+            // Arrange
+            Driver driver = new Driver();
+            driver.DOB = dob;
+            driver.InsuranceType = insuranceType;
+            // Act
+            var actual = driver.CalculatePremium(currentDate);
+            // Assess
+            Assert.AreEqual(expected, actual);
+        }
+
+
         [Test]
         [TestCase(10000, InsuranceType.Comprehensive, "2008/01/01", -1, "01/01/2020", -1)]
         [TestCase(10000, InsuranceType.Comprehensive, "2008/01/01", 0, "01/01/2020", -1)]
